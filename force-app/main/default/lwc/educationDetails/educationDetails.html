@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Education Details" icon-name="standard:education">
+        <div class="slds-box slds-grid slds-wrap" style="margin: 0px 10px;">
+            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="text" label="Degree"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="text" label="Institute"></lightning-input>
+            </div>
+             <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="text" label="Year"></lightning-input>
+            </div>
+        </div>
+        <div class="slds-p-vertical_medium">
+            <lightning-button variant="brand-outline" label="Add Education" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-box" style="background-color: white;">
+        <div class="slds-grid slds-wrap">
+            <template for:each={listStudents} for:item="rec">
+            <div key={rec.Id} class="slds-col slds-size_4-of-12" style="padding: 10px;">
+                 <lightning-card  title={rec.Name}>
+                    <lightning-button label="New" slot="actions"></lightning-button>
+                    <p class="slds-p-horizontal_small">{rec.Age}</p>
+                    <p slot="footer">Card Footer</p>
+                </lightning-card>
+            </div>
+            </template>
+        </div>
+    </div>
+</template>

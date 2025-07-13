@@ -1,0 +1,16 @@
+<template>
+        <div class="slds-p-around_medium lgc-bg slds-grid slds-wrap">
+            <div class="slds-col slds-size_11-of-12">
+                <lightning-input type="text" label="Enter some text" onchange={setCount}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-12">
+                <lightning-button variant="brand" label="Enter" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            </div>
+        </div>
+        <template for:each={accountDetails} for:item="acc">
+            <lightning-card key={acc.Id}  title={acc.Name}>
+            <p class="slds-p-horizontal_small">{acc.AnnualRevenue}</p>
+            <p slot="footer">{acc.Id}</p>
+            </lightning-card>
+        </template>
+</template>

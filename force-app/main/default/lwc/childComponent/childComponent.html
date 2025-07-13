@@ -1,0 +1,16 @@
+<template>
+    <div class="slds-box" style="background-color: white;">
+        <div class="slds-grid slds-wrap">
+            <template for:each={listNames} for:item="rec">
+            <div key={rec.Id} class="slds-col slds-size_4-of-12" style="padding: 10px;">
+                 <lightning-card  title={rec.Name}>
+                    <lightning-button label="New" slot="actions"></lightning-button>
+                    <p class="slds-p-horizontal_small">I am a good man, good enterprenuer, good Invester.</p>
+                </lightning-card>
+            </div>
+            </template>
+        </div>
+        <lightning-input type="text" label="Enter something for display in parent component" onkeyup={sendToParent}></lightning-input>
+    </div>
+
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-box">
+        <div class="slds-col slds-size_1-of-12 slds-align_absolute-center">
+            <lightning-button variant="brand" label="ClickMe!" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+
+        <template if:true={isVisible}>
+            <lightning-card  title="Hello" class="slds-m-top_medium" style="padding: 5px;">
+            <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+            <p slot="footer">Card Footer</p>
+            </lightning-card>
+        </template>
+
+    </div>
+</template>

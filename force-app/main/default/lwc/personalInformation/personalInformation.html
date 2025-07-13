@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Personal Information" icon-name="standard:employee_asset">
+        <div class="slds-box slds-grid slds-wrap" style="margin: 0px 10px;">
+            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="text" label="Full Name" data-field="fullName" onchange={handelPiChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="email" label="Email" data-field="email" onchange={handelPiChange}></lightning-input>
+            </div>
+             <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="text" label="Phone" data-field="phone" onchange={handelPiChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="text" label="Address" data-field="address" onchange={handelPiChange}></lightning-input>
+            </div>
+        </div>
+    </lightning-card>
+</template>

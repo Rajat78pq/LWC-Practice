@@ -1,0 +1,8 @@
+<template>
+   <template for:each={accountDetails} for:item="acc">
+        <lightning-card key={acc.Id}  title={acc.Name}>
+            <p class="slds-p-horizontal_small">{acc.AnnualRevenue}</p>
+            <p slot="footer">{acc.Id}</p>
+        </lightning-card>
+   </template>
+</template>

@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-box">
+        <lightning-input type="text" label="Enter FirstName" onkeyup={handelFirstName}></lightning-input>
+        <lightning-input type="text" label="Enter LastName" onkeyup={handelLastName}></lightning-input>
+        <lightning-input type="email" label="Enter Email" onkeyup={handelEmail}></lightning-input>
+    </div>
+    <lightning-card  title="premitive Data">
+        <p class="slds-p-horizontal_small">firstName: {firstName}</p>
+        <p class="slds-p-horizontal_small">lastName: {lastName}</p>
+        <p class="slds-p-horizontal_small">email: {email}</p>
+    </lightning-card>
+
+    <lightning-card  title="simple object">
+        <p class="slds-p-horizontal_small">studentData.firstName: {studentData.firstName}</p>
+        <p class="slds-p-horizontal_small">studentData.lastName: {studentData.lastName}</p>
+        <p class="slds-p-horizontal_small">studentData.email: {studentData.email}</p>
+    </lightning-card>
+
+     <lightning-card  title="reactive object">
+        <p class="slds-p-horizontal_small">reactiveStudentData.firstName: {reactiveStudentData.firstName}</p>
+        <p class="slds-p-horizontal_small">reactiveStudentData.lastName: {reactiveStudentData.lastName}</p>
+        <p class="slds-p-horizontal_small">reactiveStudentData.email: {reactiveStudentData.email}</p>
+    </lightning-card>
+</template>

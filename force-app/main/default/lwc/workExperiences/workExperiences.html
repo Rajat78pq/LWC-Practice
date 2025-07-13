@@ -1,0 +1,22 @@
+<template>
+     <lightning-card  variant="Narrow"  title="Work Experiences" icon-name="standard:people_score">
+        <div class="slds-box slds-grid slds-wrap" style="margin: 0px 10px;">
+            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="text" label="Job Title"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="text" label="Company Name"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="text" label="Job Position"></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                <lightning-input type="date" label="Start Date"></lightning-input>
+            </div>
+        </div>
+        <div class="slds-p-vertical_medium">
+            <lightning-button variant="brand-outline" label="Add Experience" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        </div>
+
+    </lightning-card>
+</template>

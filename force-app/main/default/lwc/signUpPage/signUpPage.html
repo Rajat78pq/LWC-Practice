@@ -1,0 +1,35 @@
+<template>
+    <div class="signup-container slds-box slds-theme_default">
+        <h1 class="signup-title">Sign up for Twitter</h1>
+
+        <lightning-input 
+            label="Username" 
+            value={username} 
+            onchange={handleUsernameChange}
+            class="input-spacing">
+        </lightning-input>
+
+        <lightning-input 
+            label="Email" 
+            type="email" 
+            value={email} 
+            onchange={handleEmailChange}
+            class="input-spacing">
+        </lightning-input>
+
+        <lightning-input 
+            label="Password" 
+            type="password" 
+            value={password} 
+            onchange={handlePasswordChange}
+            class="input-spacing">
+        </lightning-input>
+
+        <lightning-button 
+            label="Sign up" 
+            variant="brand" 
+            onclick={handleSignup}
+            class="signup-button">
+        </lightning-button>
+    </div>
+</template>
