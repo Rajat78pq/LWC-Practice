@@ -2,13 +2,16 @@
     <div class="slds-box slds-grid slds-wrap">
         <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
             <c-personal-information onupdatepi={handelUpdatePi}></c-personal-information>
-            <c-education-details></c-education-details>
-            <c-work-experiences></c-work-experiences>
-            <c-skills></c-skills>
-            <c-summary></c-summary>
+            <c-education-details onupdateedu={handelUpdateEdu}></c-education-details>
+            <c-work-experiences onupdateworkexp={handelUpdateWorkExp}></c-work-experiences>
+            <c-skills onupdateskill={handelUpdateSkills}></c-skills>
+            <c-summary onupdatesummary={handelUpdateSummary}></c-summary>
         </div>
-        <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
-            right side show
+        <div class="slds-col slds-size_1-of-2 slds-p-horizontal_xx-small c-board">
+            <div class="slds-p-around_small">
+                <!-- personal information  -->
+                  <c-resume-preview personal-information={personalInformation} education-details={educationDetails} work-experiences={workExperiences} skill-set={Skills} summary={Summary}></c-resume-preview>
+            </div>
         </div>
     </div>
 </template>

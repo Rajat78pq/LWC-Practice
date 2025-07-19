@@ -1,18 +1,21 @@
 <template>
     <lightning-card  variant="Narrow"  title="Education Details" icon-name="standard:education">
-        <div class="slds-box slds-grid slds-wrap" style="margin: 0px 10px;">
-            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
-                <lightning-input type="text" label="Degree"></lightning-input>
+        <template for:each={educationDetails} for:item="edu" for:index="index">
+            <div class="slds-box slds-grid slds-wrap" style="margin: 0px 10px;" key={edu.id}>
+                <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                    <lightning-input type="text" label="Degree" data-field="degree" onchange={handelEducationDetails} data-index={index}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                    <lightning-input type="text" label="Institute" data-field="institute" onchange={handelEducationDetails} data-index={index}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+                    <lightning-input type="text" label="Passing Year" data-field="passingYear" onchange={handelEducationDetails} data-index={index}></lightning-input>
+                </div>
             </div>
-            <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
-                <lightning-input type="text" label="Institute"></lightning-input>
-            </div>
-             <div class="slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
-                <lightning-input type="text" label="Year"></lightning-input>
-            </div>
-        </div>
+        </template>
+       
         <div class="slds-p-vertical_medium">
-            <lightning-button variant="brand-outline" label="Add Education" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand-outline" label="Add Education" title="Primary action" onclick={addEducation} class="slds-m-left_x-small"></lightning-button>
         </div>
     </lightning-card>
 </template>

@@ -1,0 +1,53 @@
+<template>
+    <div class="slds-box">
+        <!-- personal information  -->
+        <div class="">
+            <h1 class="slds-align_absolute-center" style="font-size:1.5rem; font-weight: bold;">{personalInformation.fullName}</h1>
+            <p class="slds-align_absolute-center">{personalInformation.email} | {personalInformation.phone} | {personalInformation.address}</p>
+        </div>
+
+        <!-- Education Details  -->
+        <div class="slds-p-top_xx-large">
+            <h2 style="font-weight: 700; font-size:1rem;">Education</h2>
+            <div style="height:auto;">
+                <lightning-datatable
+                    key-field="id"
+                    data={educationDetails}
+                    columns={EduColumns}>
+                </lightning-datatable>
+            </div>
+        </div>
+
+        <!-- work Experiences -->
+        <div class="slds-p-top_xx-large">
+            <h2 style="font-weight: 700; font-size:1rem;">Experiences</h2>
+            <div style="height:auto;">
+                <lightning-datatable
+                    key-field="id"
+                    data={workExperiences}
+                    columns={ExpColumns}>
+                </lightning-datatable>
+            </div>
+        </div>
+
+        <!-- skills  -->
+        <div class="slds-p-top_xx-large">
+            <h2 style="font-weight: 700; font-size:1rem;">Skills</h2>
+            <!-- <div>{skillSet}</div> -->
+            <template for:each={skillSet} for:item="skill">
+                <div key={skill.id}>
+                    <h3>{skill.name}</h3>
+                </div>
+            </template>
+             
+        </div>
+
+
+        <div class="slds-p-top_xx-large">
+            <h2 style="font-weight: 700; font-size:1rem;">Summary</h2>
+            <!-- <div>{skillSet}</div> -->
+             <p>{summary}</p>
+        </div>
+
+    </div>
+</template>
